@@ -1,2 +1,2 @@
-# guessing_game-Rust-
-A simple CLI guessing game built in Rust
+# Rust Gussing Game
+A simple CLI guess the nuber game built in Rust
