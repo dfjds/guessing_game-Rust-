@@ -14,7 +14,10 @@ fn main() {
         io::stdin().read_line(&mut input).expect("Failed to read line");  // Reads line
         
         // Trims whitspace. Parses and converts to int. Expects non integer results
-        let guess: u32 = input.trim().parse().expect("Invalid input\nPlease type in a number");
+        let guess: u32 = match input.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
 
         if guess > secret_num {
             println!("Lower");
